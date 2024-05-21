@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MyWindow extends JFrame {
 
@@ -43,6 +45,11 @@ public class MyWindow extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JButton btnNewButton = new JButton("OK");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("OK");
+			}
+		});
 		contentPane.add(btnNewButton, BorderLayout.SOUTH);
 	}
 
